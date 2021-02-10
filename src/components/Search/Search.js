@@ -10,7 +10,7 @@ import { actionTypes } from "../../state/reducer";
 function Search({ hideButtons = false }) {
     const [{term}, dispatch] = useStateValue();
 
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState(term);
   const history = useHistory();
 
   const search = (e) => {
@@ -30,7 +30,7 @@ function Search({ hideButtons = false }) {
     <form className="search">
       <div className="search__input">
         <SearchIcon className="search__inputIcon" />
-        <input value={term} onChange={(e) => setInput(e.target.value)} />
+        <input value={input} onChange={(e) => setInput(e.target.value)} />
         <MicIcon />
       </div>
 

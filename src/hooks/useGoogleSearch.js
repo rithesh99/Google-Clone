@@ -16,8 +16,6 @@ const useGoogleSearch = (term) => {
         });
     };
     fetchData();
-    console.log(API_KEY)
-    console.log(CONTEXT_KEY)
   }, [term]);
 
   return { data };
